@@ -26,7 +26,7 @@ You can also use (nicer) short urls :
 INSTALL httpfs;
 LOAD httpfs;
 select *
-from read_csv_auto('https://bit.ly/3mAUIPr');
+from read_csv_auto('https://bit.ly/3mAUIPr') as historic;
 ```
 
 ```sql
@@ -34,5 +34,5 @@ from read_csv_auto('https://bit.ly/3mAUIPr');
 INSTALL httpfs;
 LOAD httpfs;
 select *
-from read_csv_auto('https://bit.ly/3ZCJ1X5');
+from read_csv_auto('https://bit.ly/3ZCJ1X5') as latest;
 ```
