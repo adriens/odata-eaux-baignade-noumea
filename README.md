@@ -5,6 +5,8 @@ See https://www.kaggle.com/code/adriensales/la-qualit-des-eaux-de-baignade-noum-
 
 # 🦆 `DuckDb` hacks
 
+First, install duckdb (`brew install duckdb`) or [`install_duckdb.sh`](https://gist.github.com/adriens/74a2fd8adc6fd508d970bc1cb2419395)
+
 ```sql
 INSTALL httpfs;
 LOAD httpfs;
