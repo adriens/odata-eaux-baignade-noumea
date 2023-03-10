@@ -21,18 +21,23 @@ from 'https://raw.githubusercontent.com/adriens/odata-eaux-baignade-noumea/main/
 
 You can also use (nicer) short urls : 
 
-```sql
+```shell
+duckdb << EOF
 -- historic
 INSTALL httpfs;
 LOAD httpfs;
 select *
-from read_csv_auto('https://bit.ly/3mAUIPr') as historic;
+from
+read_csv_auto('https://bit.ly/3mAUIPr') as historic;
+EOF
 ```
 
-```sql
--- latest
+```shell
+duckdb << EOF
+-- historic
 INSTALL httpfs;
 LOAD httpfs;
 select *
 from read_csv_auto('https://bit.ly/3ZCJ1X5') as latest;
+EOF
 ```
