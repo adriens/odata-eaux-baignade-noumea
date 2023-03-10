@@ -10,6 +10,7 @@ First, install duckdb (`brew install duckdb`) or [`install_duckdb.sh`](https://g
 ```sql
 INSTALL httpfs;
 LOAD httpfs;
+.prompt "🦆 🏖️  > "
 select * 
 from 'https://raw.githubusercontent.com/adriens/odata-eaux-baignade-noumea/main/data/latest.csv';
 ```
@@ -17,6 +18,7 @@ from 'https://raw.githubusercontent.com/adriens/odata-eaux-baignade-noumea/main/
 ```sql
 INSTALL httpfs;
 LOAD httpfs;
+.prompt "🦆 🏖️  > "
 select *
 from 'https://raw.githubusercontent.com/adriens/odata-eaux-baignade-noumea/main/data/historic.csv';
 ```
