@@ -26,6 +26,7 @@ duckdb << EOF
 -- historic
 INSTALL httpfs;
 LOAD httpfs;
+.prompt "🦆 🏖️  > "
 select *
 from
 read_csv_auto('https://bit.ly/3mAUIPr') as historic;
@@ -37,6 +38,7 @@ duckdb << EOF
 -- historic
 INSTALL httpfs;
 LOAD httpfs;
+.prompt "🦆 🏖️  > "
 select *
 from read_csv_auto('https://bit.ly/3ZCJ1X5') as latest;
 EOF
