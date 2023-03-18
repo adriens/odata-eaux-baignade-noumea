@@ -4,6 +4,8 @@ See https://www.kaggle.com/code/adriensales/la-qualit-des-eaux-de-baignade-noum-
 
 # ⚡ For impatients
 
+Just run the following script in any shell and enjoy:
+
 ```shell
 #!/bin/sh
 # Diplay latest flags
