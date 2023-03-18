@@ -97,6 +97,7 @@ EOF
 ### top-10
 
 ```shell
+sh <(curl https://tea.xyz) +duckdb.org \
 duckdb << EOF
 -- historic
 INSTALL httpfs;
@@ -124,3 +125,4 @@ read_csv_auto('https://bit.ly/3mAUIPr')
 order by date desc
 limit 10;
 EOF
+```
