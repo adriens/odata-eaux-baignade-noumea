@@ -94,3 +94,35 @@ from read_csv_auto('https://bit.ly/3ZCJ1X5') as latest;
 EOF
 
 ```
+### top-10
+
+```shell
+duckdb << EOF
+-- historic
+INSTALL httpfs;
+LOAD httpfs;
+select *
+from read_csv_auto('https://bit.ly/3ZCJ1X5') as latest limit 10;
+EOF
+```
+
+### last-20
+
+```shell
+#!/bin/sh
+# Diplay latest flags
+sh <(curl https://tea.xyz) +duckdb.org \
+duckdb << EOF
+INSTALL httpfs;
+LOAD httpfs;
+select date, plage,
+    case 
+        when (flag_color = 'BLUE')      THEN '🟦'
+        when (flag_color = 'YELLOW')    THEN '🟨'
+        when (flag_color = 'RED')       THEN '🟥'
+    end as flag
+from
+read_csv_auto('https://bit.ly/3mAUIPr')
+order by date desc
+limit 10;
+EOF
