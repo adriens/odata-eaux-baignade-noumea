@@ -7,7 +7,6 @@ sh <(curl https://tea.xyz) +duckdb.org \
 duckdb << EOF
 INSTALL httpfs;
 LOAD httpfs;
-.mode duckbox
 select plage,
     flag_color,
     case 
