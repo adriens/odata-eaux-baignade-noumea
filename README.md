@@ -109,8 +109,6 @@ EOF
 ### last-20
 
 ```shell
-#!/bin/sh
-# Diplay latest flags
 sh <(curl https://tea.xyz) +duckdb.org \
 duckdb << EOF
 INSTALL httpfs;
