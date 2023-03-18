@@ -94,22 +94,12 @@ from read_csv_auto('https://bit.ly/3ZCJ1X5') as latest;
 EOF
 
 ```
-### top-10
-
-```shell
-sh <(curl https://tea.xyz) +duckdb.org \
-duckdb << EOF
--- historic
-INSTALL httpfs;
-LOAD httpfs;
-select *
-from read_csv_auto('https://bit.ly/3ZCJ1X5') as latest limit 10;
-EOF
-```
-
 ### last-20
+Print the 20 last status of all beaches
 
 ```shell
+#!/bin/sh
+# Print the 20 last status of all beaches
 sh <(curl https://tea.xyz) +duckdb.org \
 duckdb << EOF
 INSTALL httpfs;
