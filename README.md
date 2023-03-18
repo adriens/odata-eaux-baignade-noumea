@@ -26,7 +26,6 @@ EOF
 ```
 
 
-
 # 🦆 `DuckDb` hacks
 
 First, install duckdb (`brew install duckdb`) or [`install_duckdb.sh`](https://gist.github.com/adriens/74a2fd8adc6fd508d970bc1cb2419395)
@@ -70,6 +69,9 @@ from read_csv_auto('https://bit.ly/3ZCJ1X5') as latest;
 EOF
 ```
 ## Tasks
+
+Below some [`xc`](https://xcfile.dev/) ready tasks. 
+Just type `xc`.
 
 ### latest
 Print the latest status of all beaches
