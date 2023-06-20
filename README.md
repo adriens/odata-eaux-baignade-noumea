@@ -123,6 +123,7 @@ EOF
 cf [Dates d'interdiction d'activités nautiques à Nouméa](https://www.nouvellecaledonie.travel/interdiction-activites-nautiques-noumea/)
 
 ```shell
+#!/bin/sh
 sh <(curl https://tea.xyz) +duckdb.org \
 duckdb << EOF
 INSTALL httpfs;
