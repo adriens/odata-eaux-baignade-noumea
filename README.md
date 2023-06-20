@@ -94,6 +94,7 @@ from read_csv_auto('https://bit.ly/3ZCJ1X5') as latest;
 EOF
 
 ```
+
 ### last-20
 Print the 20 last status of all beaches
 
@@ -114,5 +115,26 @@ from
 read_csv_auto('https://bit.ly/3mAUIPr')
 order by date desc
 limit 10;
+EOF
+```
+
+### baignade-autorisee
+
+cf [Dates d'interdiction d'activités nautiques à Nouméa](https://www.nouvellecaledonie.travel/interdiction-activites-nautiques-noumea/)
+
+```shell
+sh <(curl https://tea.xyz) +duckdb.org \
+duckdb << EOF
+INSTALL httpfs;
+LOAD httpfs;
+select
+    case
+        when count(*) > 0 then '👎'
+        else '👍'
+    end is_baignade_autorisee
+from read_csv_auto('https://bit.ly/3JJCZhJ')
+where
+    current_date >= date_debut and
+    current_date <= date_fin;
 EOF
 ```
